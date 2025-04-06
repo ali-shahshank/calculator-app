@@ -18,6 +18,11 @@ A responsive calculator application built with React.js featuring basic arithmet
    ```bash
    git clone https://github.com/ali-shahshank/react-calculator.git
    ```
+2. Install Dependencies:
+   npm install
+
+3. Run the development server:
+   npm run dev
 
 Technologies Used
 ⚛️ React 18
