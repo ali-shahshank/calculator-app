@@ -26,11 +26,4 @@ Technologies Used
 
 🔥 Vite (Build tool)
 
-Tree
 
-/src
-├── components/
-│ ├── Calculator.jsx
-│ └── Calculator.css
-├── App.jsx
-└── main.jsx
