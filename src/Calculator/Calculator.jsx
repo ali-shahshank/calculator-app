@@ -143,159 +143,196 @@ const Calculator = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-12 col-md-12 p-4 ">
-            <div className="container p-4 text-center text-md-start ">
+          <div className="col-sm-12 col-md-12 p-4 "></div>
+          <div className="col-sm-12 col-md-6 p-2 p-md-4 ">
+            <div className="container p-4 text-start text-md-center">
               <h1 className="fs-1">Calculator App</h1>
               <h4 className="fs-4 text-muted">React Calculator App</h4>
             </div>
           </div>
-          <div className="col-sm-12 col-md-4 p-4 d-none d-md-block"></div>
-          <div className="col-sm-12 col-md-4 p-4 ">
-            <div className="container p-4 bg-dark rounded-2">
+          <div className="col-sm-12 col-md-5 p-4">
+            <div className="calculator-container container p-4 rounded-2 ">
               <input
                 type="text"
-                className={`form-control form-control-lg rounded-1 ${
+                className={`form-control form-control-lg  ${
                   inputValue === "Infinity" ? "text-danger" : ""
                 }`}
                 value={inputValue || displayValue || "0"}
                 disabled
               />
-
               <div className="container p-3"></div>
               <div className="container p-0 d-flex">
-                <button
-                  className="btn btn-lg btn-light border-2  m-1"
-                  onClick={handleClear}
-                >
-                  C
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={handlePercentage}
-                >
-                  %
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={handlePlusMinus}
-                >
-                  +/-
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleOperator("/")}
-                >
-                  /
-                </button>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2 clear-container">
+                  <button
+                    className="btn btn-lg btn-light m-1  border-1 clear"
+                    onClick={handleClear}
+                  >
+                    C
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-secondary border-1 m-1"
+                    onClick={handlePercentage}
+                  >
+                    %
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={handlePlusMinus}
+                  >
+                    +/-
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleOperator("/")}
+                  >
+                    /
+                  </button>
+                </div>
               </div>
               <div className="container p-0  d-flex">
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(1)}
-                >
-                  1
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(2)}
-                >
-                  2
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(3)}
-                >
-                  3
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1 fs-2"
-                  onClick={() => handleOperator("*")}
-                >
-                  *
-                </button>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(1)}
+                  >
+                    1
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(2)}
+                  >
+                    2
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(3)}
+                  >
+                    3
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1 fs-2"
+                    onClick={() => handleOperator("*")}
+                  >
+                    *
+                  </button>
+                </div>
               </div>
               <div className="container p-0  d-flex">
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(4)}
-                >
-                  4
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(5)}
-                >
-                  5
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(6)}
-                >
-                  6
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1 "
-                  onClick={() => handleOperator("+")}
-                >
-                  +
-                </button>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(4)}
+                  >
+                    4
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(5)}
+                  >
+                    5
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(6)}
+                  >
+                    6
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1 "
+                    onClick={() => handleOperator("+")}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
               <div className="container p-0  d-flex">
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(7)}
-                >
-                  7
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(8)}
-                >
-                  8
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(9)}
-                >
-                  9
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleOperator("-")}
-                >
-                  -
-                </button>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(7)}
+                  >
+                    7
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(8)}
+                  >
+                    8
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(9)}
+                  >
+                    9
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleOperator("-")}
+                  >
+                    -
+                  </button>
+                </div>
               </div>
               <div className="container p-0  d-flex">
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={() => handleInputValue(0)}
-                >
-                  0
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1 fw-bold"
-                  onClick={() => handleInputValue(".")}
-                >
-                  .
-                </button>
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={handleClearEntry}
-                >
-                  CE
-                </button>
-
-                <button
-                  className="btn btn-lg btn-light border-2 m-1"
-                  onClick={handleEqual}
-                >
-                  =
-                </button>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={() => handleInputValue(0)}
+                  >
+                    0
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1 fw-bold"
+                    onClick={() => handleInputValue(".")}
+                  >
+                    .
+                  </button>
+                </div>
+                <div className="container p-2 m-1 bg-light d-flex justify-content-center align-items-center rounded-2">
+                  <button
+                    className="btn btn-lg btn-light border-1 border-secondary m-1"
+                    onClick={handleClearEntry}
+                  >
+                    CE
+                  </button>
+                </div>
+                <div className="container p-2 m-1  d-flex justify-content-center align-items-center rounded-2 equal-container  ">
+                  <button
+                    className="btn btn-lg btn-light border-1  m-1 equal"
+                    onClick={handleEqual}
+                  >
+                    =
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col-sm-12 col-md-4 p-4  d-none d-md-block"></div>
         </div>
       </div>
     </>

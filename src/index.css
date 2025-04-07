@@ -3,3 +3,34 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.calculator-container {
+  background-color: #212529;
+  /* background: linear-gradient(to bottom, #cccccc, #969696); */
+}
+
+input {
+  border: 15px solid #f6f6f6 !important;
+  border-radius: 4px !important;
+  background-color: #cd5a35 !important;
+  color: #f6f6f6 !important;
+}
+
+.clear {
+  border: solid #ba4c28 !important;
+  color: #ba4c28 !important;
+}
+
+.equal-container {
+  background-color: #cd5a35;
+}
+
+.equal {
+  background-color: #cd5a35 !important;
+  color: #f6f6f6 !important;
+  border: solid #f6f6f6 !important;
+}
+
+.equal:hover {
+  background-color: #ba4c28 !important;
+}
